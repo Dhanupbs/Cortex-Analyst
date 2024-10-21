@@ -2,6 +2,8 @@
 
 This repository contains the setup code and a simple Streamlit-based UI for Snowflake Cortex Analyst. It allows users to interact with a large language model (LLM) to generate SQL queries based on text input, tightly integrated with the Snowflake data ecosystem.
 
+![Cortex Analyst Demo](https://github.com/sarathi-aiml/Cortex-Analyst/blob/main/cortex-overview-2.gif)]
+
 ## Features
 
 - **Setup Script**: SQL code to create roles, stages, schemas, and tables in Snowflake for Cortex Analyst.
