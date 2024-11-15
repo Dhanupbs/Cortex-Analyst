@@ -266,7 +266,7 @@ def display_content(content: list, message_index: int = None) -> None:
                                             st.warning(f"{selected_chart} charts require hierarchical data with more than one categorical column. Please choose another chart type.")
                                 
                                 else:
-                                    st.warning("No suitable data available for charting. Please check your data or query for different columns.")
+                                    st.write("")
 
                     else:
                         st.dataframe(df)
