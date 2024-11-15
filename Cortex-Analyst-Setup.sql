@@ -101,8 +101,35 @@ ON_ERROR = CONTINUE;
 -- Create a New Streamlit app in Snowflake. Make sure you use the same datbase and schema for to create this app. 
 -- copy paste the streamlit.py code from the repo to your SiS (Streamlit in Snowflake) app. Run it
 
+---------------------------------------Check PostMan------------------------------------------
 
----------------Sample questions to test your app---------------
+Call URL:
+https://POB19930.snowflakecomputing.com/api/v2/cortex/analyst/message
+
+Header:
+"Content-Type"                         : "application/json",
+"X-Snowflake-Authorization-Token-Type" :"KEYPAIR_JWT"
+
+Body:
+{
+  "messages": [
+    {
+      "content": [
+        {
+          "type": "text",
+          "text": "show top 10 most common categories of scientific books?"
+        }
+      ],
+      "role": "user"
+    }
+  ],
+  "semantic_model_file": "@CORTEX_TOKEN_DB.CORTEX_TOKEN_SCHEMA.CORTEX_ANALYST_STAGE/book_model.yaml",
+  "stream": false
+}
+
+------------------------------------------------------------------------------------------------------------------
+
+--------------------------------------Sample questions to test your app-------------------------------------------
 
 1. show top 10 most common categories of scientific books?
 2. How many scientific books are in the dataset?
